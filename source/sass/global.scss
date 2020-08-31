@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  font-family: $font-text;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-text;
+  background-color: $bg-color;
+}
+
+.wrapper {
+  max-width: 1190px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 0 0 14px;
+  }
+}
+
+.overflow {
+  overflow: hidden;
+}
