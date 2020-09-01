@@ -3,21 +3,3 @@
   margin: 0;
   list-style: none;
 }
-
-@mixin tablet {
-  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: $mobile-max-width) {
-    @content;
-  }
-}
-
-@mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    @content;
-  }
-}

@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nerds</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="main-header">
+    <div class="wrapper">
     <nav class="main-header__nav main-navigation">
       <a class="main-navigation__logo" href="index.html">
         <img src="img/nerds-logo.svg" width="160" height="65" alt="main logo">
@@ -19,7 +21,7 @@
           <a class="main-navigation__link" href="#">Клиенты</a>
         </li>
         <li class="main-navigation__item">
-          <a class="main-navigation__link" href="catalog.html">Магазин</a>
+          <a class="main-navigation__link main-navigation__link--active" href="catalog.html">Магазин</a>
         </li>
         <li class="main-navigation__item">
           <a class="main-navigation__link" href="#">Контакты</a>
@@ -31,6 +33,7 @@
           </li>
         </ul>
     </nav>
+    </div>
   </header>
   <main>
     <section class="page-title">
@@ -161,24 +164,5 @@
       </div>
     </section>
   </footer>
-  <section class="modal">
-    <h2>Напишите нам</h2>
-    <form class="modal__form form-modal" action="#" method="POST">
-      <div class="form-modal__item">
-        <label for="name">Ваше имя:</label>
-        <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-      </div>
-      <div class="form-modal__item">
-        <label for="name">Ваше e-mail:</label>
-        <input type="text" name="email" id="email" placeholder="email@example.com">
-      </div>
-      <div class="form-modal__item">
-        <label for="text">Текст письма:</label>
-        <textarea id="text" placeholder="В свободной форме"></textarea>
-      </div>
-      <button type="submit" class="form-modal__link btn">Отправить</button>
-      <button type="button" class="form-modal__close"><span>Закрыть форму</span></button>
-    </form>
-  </section>
 </body>
 </html>

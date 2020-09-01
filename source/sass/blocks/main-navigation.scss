@@ -1,0 +1,44 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main-navigation__menu {
+  @include reset-list;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.main-navigation__item {
+  margin-right: 50px;
+}
+
+.main-navigation__link {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: $mark-color;
+  }
+
+  &:active {
+    color: #000000;
+    opacity: 0.3;
+  }
+
+  &--active {
+    border-bottom: 2px solid $mark-color;
+  }
+}
+
+.main-navigation__user {
+  @include reset-list;
+}

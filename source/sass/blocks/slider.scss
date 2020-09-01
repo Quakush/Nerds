@@ -1,0 +1,81 @@
+.slider {
+
+  & input[type="radio"] {
+    display: none;
+  }
+}
+
+.slider__header {
+  width: 560px;
+}
+
+.slider__title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: $color-title;
+}
+
+.slide {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+}
+
+.slide-1 {
+  background-image: url("../img/bg-slide-01.png");
+}
+
+.slide-2 {
+  background-image: url("../img/bg-slide-02.png");
+}
+
+.slide-3 {
+  background-image: url("../img/bg-slide-03.png");
+}
+
+.slider__control {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  z-index: 10;
+
+  & label {
+    position: relative;
+    margin-right: 20px;
+    font-size: 0;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+}
+
+#slide-1:checked ~ .slide-1,
+#slide-2:checked ~ .slide-2,
+#slide-3:checked ~ .slide-3 {
+  opacity: 1;
+  z-index: 5;
+}
+
+#slide-1:checked ~ .slider__control label:nth-child(1)::after,
+#slide-2:checked ~ .slider__control label:nth-child(2)::after,
+#slide-3:checked ~ .slider__control label:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
