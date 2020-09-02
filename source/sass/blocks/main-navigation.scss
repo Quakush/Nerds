@@ -5,19 +5,33 @@
   width: 100%;
 }
 
+.main-navigation__logo {
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .main-navigation__menu {
   @include reset-list;
 
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-right: 45px;
 }
 
-.main-navigation__item {
-  margin-right: 50px;
+.main-navigation__item:not(:last-of-type) {
+  margin-right: 46px;
 }
 
 .main-navigation__link {
+  padding: 10px 0;
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
@@ -36,6 +50,13 @@
 
   &--active {
     border-bottom: 2px solid $mark-color;
+  }
+
+  &--cart {
+    padding-left: 40px;
+    background-image: url(../img/icons/icon-cart.svg);
+    background-repeat:no-repeat;
+    background-position: left 50%;
   }
 }
 
