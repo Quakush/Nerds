@@ -1,0 +1,13 @@
+.page-title {
+  width: 100%;
+  padding: 32px 0 73px;
+  background-color: #eeeeee;
+
+  & h1 {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 500;
+    color: $color-title;
+    text-align: center;
+  }
+}

@@ -1,0 +1,15 @@
+.map {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 416px;
+  margin-bottom: 68px;
+  background-color: #e9e5dc;
+  background-image: url("../img/bg-map.png");
+}
+
+.map__contacts {
+  margin-left: 140px;
+}

@@ -1,0 +1,28 @@
+.main-footer {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+.main-footer__social {
+  display: flex;
+  align-items: center;
+}
+
+.main-footer__bottom {
+  margin-left: 140px;
+
+  & b{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: $color-title;
+  }
+
+  & p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #444444;
+  }
+}

@@ -29,7 +29,7 @@
         </ul>
         <ul class="main-navigation__user">
           <li class="main-navigation__item">
-            <a class="main-navigation__link" href="#">Корзина</a>
+            <a class="main-navigation__link main-navigation__link--cart" href="#">Корзина</a>
           </li>
         </ul>
     </nav>
@@ -39,107 +39,166 @@
     <section class="page-title">
     <h1>Магазин готовых шаблонов</h1>
     </section>
-    <section class="filter">
-      <h2 class="visually-hidden">Фильтр</h2>
-      <form class="filter__form form" action="#" method="POST">
-        <fieldset>
-          <legend>Стоимость:</legend>
-          <div class="filter__range range"></div>
-        </fieldset>
-        <fieldset>
-          <legend>Сетка:</legend>
-          <label><input type="radio" name="net" id="adaptive" value="adaptive" checked>Адаптивная</label>
-          <label><input type="radio" name="net" id="fix" value="fix">Фиксированная</label>
-          <label><input type="radio" name="net" id="rubber" value="rubber">Резиновая</label>
-        </fieldset>
-        <fieldset>
-          <label><input type="checkbox" name="slider" id="slider" value="slider" checked>Слайдер</label>
-          <label><input type="checkbox" name="advantage" id="advantage" value="advantage">Блок преимуществ</label>
-          <label><input type="checkbox" name="news" id="news" value="news" checked>Новости</label>
-          <label><input type="checkbox" name="gallery" id="gallery" value="gallery">Галерея</label>
-          <label><input type="checkbox" name="cart" id="cart" value="cart">Корзина</label>
-        </fieldset>
-        <button type="submit" class="form__link btn">Показать</button>
-      </form>
-    </section>
-    <section class="catalog">
-      <ul class="catalog__list">
-        <li class="catalog__item">
-          <div class="catalog__card card">
-            <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
-            <img src="img/img-sedona.jpg" width="360" height="576" class="card__image" alt="sedona">
-            <div class="card__description">
-              <h3>Sedona</h3>
-              <p>Информационный сайт для туристов</p>
-              <a class="card__price">9 900 руб.</a>
+    <div class="main-catalog__wrapper">
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр</h2>
+        <form class="filter__form form" action="#" method="POST">
+          <fieldset>
+            <legend>Стоимость:</legend>
+            <div class="form__range range">
+              <div class="range__control">
+                <div class="range__scale">
+                  <div class="range__bar"></div>
+                </div>
+                <div class="range__toggle range__toggle--min"></div>
+                <div class="range__toggle range__toggle--max"></div>
+              </div>
+              <div class="range__price">
+                <label class="range__min">от <input type="text" name="min" value="0"></label>
+                <label class="range__max">от <input type="text" name="max" value="15000"></label>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__card card">
-            <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
-            <img src="img/img-pink.jpg" width="360" height="576" class="card__image" alt="sedona">
-            <div class="card__description">
-              <h3>Pink app</h3>
-              <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <a class="card__price">9 900 руб.</a>
+          </fieldset>
+          <fieldset>
+            <legend>Сетка:</legend>
+            <ul class="form__list">
+            <li class="form__item">
+              <label>
+                <input type="radio" name="net" id="adaptive" value="adaptive" checked>
+                Адаптивная
+              </label>
+            </li>
+            <li class="form__item">
+              <label>
+                <input type="radio" name="net" id="fix" value="fix">
+                Фиксированная
+              </label>
+            </li>
+            <li class="form__item">
+              <label>
+                <input type="radio" name="net" id="rubber" value="rubber">
+                Резиновая
+              </label>
+            </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label>
+                  <input type="checkbox" name="slider" id="slider" value="slider" checked>
+                  Слайдер
+                </label>
+              </li>
+              <li class="form__item">
+                <label>
+                  <input type="checkbox" name="advantage" id="advantage" value="advantage">
+                  Блок преимуществ
+                </label>
+              </li>
+              <li class="form__item">
+                <label>
+                  <input type="checkbox" name="news" id="news" value="news" checked>
+                  Новости
+                </label>
+              </li>
+              <li class="form__item">
+                <label>
+                  <input type="checkbox" name="gallery" id="gallery" value="gallery">
+                  Галерея
+                </label>
+              </li>
+              <li class="form__item">
+                <label>
+                  <input type="checkbox" name="cart" id="cart" value="cart">
+                  Корзина
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit" class="form__link btn">Показать</button>
+        </form>
+      </section>
+      <section class="catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <div class="catalog__card card">
+              <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
+              <img src="img/img-sedona.jpg" width="360" height="576" class="card__image" alt="sedona">
+              <div class="card__description">
+                <h3>Sedona</h3>
+                <p>Информационный сайт для туристов</p>
+                <a class="card__price">9 900 руб.</a>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__card card">
-            <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
-            <img src="img/img-barbershop.jpg" width="360" height="576" class="card__image" alt="sedona">
-            <div class="card__description">
-              <h3>Barbershop</h3>
-              <p>Сайт салона красоты. Для мужчин, да.</p>
-              <a class="card__price">9 900 руб.</a>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__card card">
+              <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
+              <img src="img/img-pink.jpg" width="360" height="576" class="card__image" alt="sedona">
+              <div class="card__description">
+                <h3>Pink app</h3>
+                <p>Продуктовый лендинг приложения для iOS и Android</p>
+                <a class="card__price">9 900 руб.</a>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__card card">
-            <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
-            <img src="img/img-mishka.jpg" width="360" height="576" class="card__image" alt="sedona">
-            <div class="card__description">
-              <h3>Mishka</h3>
-              <p>Интернет-магазин вязаных игрушек</p>
-              <a class="card__price">9 900 руб.</a>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__card card">
+              <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
+              <img src="img/img-barbershop.jpg" width="360" height="576" class="card__image" alt="sedona">
+              <div class="card__description">
+                <h3>Barbershop</h3>
+                <p>Сайт салона красоты. Для мужчин, да.</p>
+                <a class="card__price">9 900 руб.</a>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__card card">
-            <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
-            <img src="img/img-aplus.jpg" width="360" height="576" class="card__image" alt="sedona">
-            <div class="card__description">
-              <h3>A plus</h3>
-              <p>Лендинг курсов повышения квалификации</p>
-              <a class="card__price">9 900 руб.</a>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__card card">
+              <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
+              <img src="img/img-mishka.jpg" width="360" height="576" class="card__image" alt="sedona">
+              <div class="card__description">
+                <h3>Mishka</h3>
+                <p>Интернет-магазин вязаных игрушек</p>
+                <a class="card__price">9 900 руб.</a>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__card card">
-            <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
-            <img src="img/img-kvast.jpg" width="360" height="576" class="card__image" alt="sedona">
-            <div class="card__description">
-              <h3>Кваст</h3>
-              <p>Промо-сайт производителя крафтового кваса</p>
-              <a class="card__price">9 900 руб.</a>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__card card">
+              <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
+              <img src="img/img-aplus.jpg" width="360" height="576" class="card__image" alt="sedona">
+              <div class="card__description">
+                <h3>A plus</h3>
+                <p>Лендинг курсов повышения квалификации</p>
+                <a class="card__price">9 900 руб.</a>
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
-      <div class="catalog__paginator paginator">
-        <ul class="paginator__list">
-          <li class="paginator__item"><a href="#" class="paginator__link paginator__link--active">1</a></li>
-          <li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
-          <li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
-          <li class="paginator__item"><a href="#" class="paginator__link">Следующая</a></li>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__card card">
+              <div class="card__top"><img src="img/browser.svg" width="360" height="40" alt="top"></div>
+              <img src="img/img-kvast.jpg" width="360" height="576" class="card__image" alt="sedona">
+              <div class="card__description">
+                <h3>Кваст</h3>
+                <p>Промо-сайт производителя крафтового кваса</p>
+                <a class="card__price">9 900 руб.</a>
+              </div>
+            </div>
+          </li>
         </ul>
-      </div>
-    </section>
+        <div class="catalog__paginator paginator">
+          <ul class="paginator__list">
+            <li class="paginator__item"><a href="#" class="paginator__link paginator__link--active">1</a></li>
+            <li class="paginator__item"><a href="#" class="paginator__link">2</a></li>
+            <li class="paginator__item"><a href="#" class="paginator__link">3</a></li>
+            <li class="paginator__item"><a href="#" class="paginator__link">Следующая</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
     <section class="main-footer__map map">
@@ -151,14 +210,14 @@
         <a class="contacts__link btn">Напишите нам</a>
       </aside>
     </section>
-    <section class="main-footer__social social">
+    <section class="main-footer__social social wrapper">
       <h2 class="visually-hidden">Мы в соцсетях</h2>
       <ul class="social__list">
-        <li class="social__item"><a href="#" class="social__link"><span class="visually-hidden">Вконтакте</span></a></li>
-        <li class="social__item"><a href="#" class="social__link"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li class="social__item"><a href="#" class="social__link"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li class="social__item"><a href="#" class="social__link social__link--vk"><span class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social__item"><a href="#" class="social__link social__link--fb"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li class="social__item"><a href="#" class="social__link social__link--insta"><span class="visually-hidden">Инстаграм</span></a></li>
       </ul>
-      <div class="main-footer__slogan">
+      <div class="main-footer__bottom">
         <b>Давайте дружить, это выгодно!</b>
         <p>Скидка 10% для друзей из социальных сетей.</p>
       </div>

@@ -1,0 +1,33 @@
+.form {
+  padding-top: 54px;
+
+  & fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  & legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: $color-title;
+    text-transform: uppercase;
+  }
+}
+
+.form__list {
+  @include reset-list;
+
+  & label {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $color-text;
+  }
+}
+
+.form__range {
+  width: 260px;
+  margin-top: 49px;
+}

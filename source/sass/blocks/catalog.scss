@@ -1,0 +1,16 @@
+.catalog {
+  width: 760px;
+}
+
+.catalog__list {
+  @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.catalog__item {
+  width: 360px;
+}

@@ -1,0 +1,45 @@
+.brands {
+  padding: 40px 0;
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.brands__list {
+  @include reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brands__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 290px;
+  height: 100px;
+
+  &:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 0;
+    width: 2px;
+    height: 52px;
+    background-color: #eeeeee;
+  }
+}
+
+.brands__link {
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
