@@ -1,5 +1,43 @@
 .range__control {
+  position: relative;
   height: 80px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #f1f1f1;
   border-radius: 5px;
+}
+
+.range__scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.range__bar {
+  width: 70%;
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--min {
+    left: 18px;
+  }
+
+  &--max {
+    left: 160px;
+  }
 }
