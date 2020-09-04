@@ -14,20 +14,46 @@
     color: $color-title;
     text-transform: uppercase;
   }
+
+  & input {
+    display: none;
+  }
+
+  & input[type="radio"] + label {
+    background-image: url("../img/radio-off.svg");
+  }
 }
 
 .form__list {
   @include reset-list;
 
+  margin-bottom: 30px;
+  padding: 6px 0;
+
   & label {
+    padding-left: 30px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
     color: $color-text;
+    background-repeat: no-repeat;
+    background-position: left center;
   }
+}
+
+.form__item {
+  padding: 8px;
 }
 
 .form__range {
   width: 260px;
   margin-top: 49px;
+  margin-bottom: 60px;
+}
+
+.form__link {
+  width: 100%;
+  color: $color-title;
+  background-color: #ededed;
+  border: none;
 }
