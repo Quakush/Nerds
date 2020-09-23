@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+
+  &:hover .card__description    ,
+  &:focus .card__description {
+    display: block;
+  }
+}
+
+.card__top img {
+  vertical-align: top;
+}
+
+.card h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.card p {
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #666;
+}
+
+.card__description {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 0 50px;
+  background-color: #eee;
+}
+
+.card__price {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 17px 0 15px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $mark-color;
+}
