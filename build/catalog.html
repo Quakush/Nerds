@@ -199,6 +199,7 @@
   <footer class="main-footer">
     <section class="main-footer__map map">
       <h2 class="visually-hidden">Как нас найти</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCQ3YTvTPA" width="1440" height="416" allowfullscreen="true"></iframe>
       <aside class="map__contacts contacts">
         <p class="contacts__title">Nёrds design studio</p>
         <p class="contacts__address">191186, Санкт-Петербург, ул. Б.Конюшенная, д.19/8</p>
@@ -219,5 +220,31 @@
       </div>
     </section>
   </footer>
+
+  <section class="modal feedback">
+    <h2>Напишите нам</h2>
+    <form action="#" class="feedback__form form-feedback" method="POST">
+      <div class="form-feedback__wrapper">
+        <p class="form-feedback__row">
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="form-feedback__row">
+          <label for="name">Ваш email:</label>
+          <input type="text" name="email" id="email" placeholder="email@example.com">
+        </p>
+        <p class="form-feedback__textarea">
+          <label for="text">Текст письма:</label>
+          <textarea rows="5" id="text" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
+      <button type="submit" class="form-feedback__btn btn">Отправить</button>
+      <button type="button" class="form-feedback__close" aria-label="закрыть"></button>
+    </form>
+  </section>
+
+  <div class="overlay"></div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

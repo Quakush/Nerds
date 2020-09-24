@@ -11,5 +11,14 @@
 }
 
 .map__contacts {
+  position: absolute;
+  z-index: 2;
   margin-left: 140px;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }

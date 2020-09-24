@@ -8,10 +8,12 @@
   text-transform: uppercase;
   background-color: $mark-color;
   border-radius: 3px;
+  border: none;
 
   &:hover,
   &:focus {
     background-color: #e74246;
+    transition: all 0.5s;
   }
 
   &:active {

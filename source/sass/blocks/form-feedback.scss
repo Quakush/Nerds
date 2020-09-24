@@ -1,0 +1,76 @@
+.form-feedback {
+  position: relative;
+  width: 760px;
+  margin: 0 auto;
+}
+
+.form-feedback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-feedback label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.form-feedback input[type="text"] {
+  width: 360px;
+  padding: 15px;
+  border: 2px solid #d7dbdb;
+}
+
+.form-feedback textarea {
+  width: 760px;
+  padding: 15px;
+  border: 2px solid #d7dbdb;
+}
+
+.form-feedback__textarea {
+  margin-top: 35px;
+  margin-bottom: 45px;
+}
+
+.form-feedback__btn {
+  width: 260px;
+}
+
+.form-feedback__close {
+  position: absolute;
+  top: -90px;
+  right: -11px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: -1px;
+    width: 24px;
+    height: 3px;
+    background-color: $mark-color;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: -1px;
+    width: 24px;
+    height: 3px;
+    background-color: $mark-color;
+    transform: rotate(-45deg);
+  }
+}
