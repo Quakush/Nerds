@@ -5,6 +5,11 @@
   &:focus .card__description {
     display: block;
   }
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 6px 7.5px rgba(0, 1, 1, 0.25));
+  }
 }
 
 .card__top img {
